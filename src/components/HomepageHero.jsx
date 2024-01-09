@@ -32,4 +32,3 @@ const Hero = () => (
 
 export default Hero;
 
-// icon="mr-6 sm:mr-0 transition ease-out delay-100 hover:-translate-y-1 hover:scale-105 p-2 md:mb-6"
