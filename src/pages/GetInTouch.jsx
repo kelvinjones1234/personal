@@ -12,7 +12,7 @@ const GetInTouch = () => {
         </div>
       </div>
       <div className="grid justify-center text-center md:flex gap-[4em]">
-        <div className="form-container bg-black py-[2em] my-[4em] w-[300px] sm:w-[400px] rounded-xl opacity-95">
+        <div className="form-container bg-black/[.8] py-[2em] my-[4em] w-[300px] sm:w-[400px] rounded-xl">
           <Hero />
         </div>
         <div>

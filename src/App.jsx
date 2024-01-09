@@ -8,6 +8,7 @@ import Preview from "./pages/Preview";
 import PostByCategory from "./pages/PostByCategory";
 import About from "./pages/About";
 import GetInTouch from "./pages/GetInTouch";
+import Profile from "./pages/Profile";
 
 export default function App() {
   return (
@@ -21,8 +22,8 @@ export default function App() {
         <Route path="/posts-category" element={<PostByCategory />} />
         <Route path="/preview" element={<Preview />} />
         <Route path="/about" element={<About />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/get-in-touch" element={<GetInTouch />} />
-
       </Routes>
     </BrowserRouter>
   );
