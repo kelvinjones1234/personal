@@ -1,13 +1,26 @@
 import icon from "../assets/images/done.svg";
 import search from "../assets/images/search.svg";
 import img1 from "../assets/images/1.jpg";
-import Popup from "./Popup";
+import Popup from "./ReadPopup";
 import { useState } from "react";
+import EditPopup from "./EditProfilePopup";
 
 const Hero = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
+  const [edit, setEdit] = useState(false);
+
   const showPopup = () => {
     setPopupVisible(true);
+  };
+  const closePopup = () => {
+    setPopupVisible(false);
+  };
+
+  const editPopup = () => {
+    setEdit(true);
+  };
+  const closeeditPopup = () => {
+    setEdit(false);
   };
   return (
     <div className="hero-container mt-[4em] flex justify-center">
@@ -21,7 +34,10 @@ const Hero = () => {
                 alt=""
               />
               <div className="edit-button text-center mt-2 text-[.8rem]">
-                <button className="border border-six rounded-full px-2">
+                <button
+                  className="border border-six rounded-full px-2 hover:bg-six transition duration-500 ease-in-out"
+                  onClick={editPopup}
+                >
                   edit
                 </button>
               </div>
@@ -45,9 +61,18 @@ const Hero = () => {
                 isPopupVisible
                   ? "opacity-100 scale-100"
                   : "opacity-0 scale-90 pointer-events-none"
+              } flex items-center justify-center transition-opacity transition-transform duration-500 ease-in-out`}
+            >
+              <Popup close={closePopup} />
+            </div>
+            <div
+              className={`popup fixed inset-0 ${
+                edit
+                  ? "opacity-100 scale-100"
+                  : "opacity-0 scale-90 pointer-events-none"
               } flex items-center justify-center transition-opacity transition-transform duration-300 ease-in-out`}
             >
-              <Popup />
+              <EditPopup close={closeeditPopup} />
             </div>
             <div className="completed-book text-white flex bg-black p-3 mb-3 rounded-2xl">
               <p className="flex-[80%]">Book title</p>
@@ -66,7 +91,7 @@ const Hero = () => {
             </div>
             <div className="button text-center">
               <button
-                className="bg-six px-3 text-[.8rem] rounded-xl"
+                className="rounded-xl border border-six px-2 text-white hover:bg-six transition duration-500 ease-in-out text-[.8rem] rounded-xl"
                 onClick={showPopup}
               >
                 see all

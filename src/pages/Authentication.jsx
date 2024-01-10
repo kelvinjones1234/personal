@@ -1,9 +1,9 @@
 import React from "react";
-import Hero from "../components/GetInTouchHero";
 import Navbar from "../components/Navbar";
-import Socials from "../components/Socials";
+import Login from "../components/Login";
 
-const GetInTouch = () => {
+
+const Register = () => {
   return (
     <div className="bg-background-image bg-center h-screen fixed w-full bg-cover">
       <div className="bg-black/[.2] h-full">
@@ -12,15 +12,9 @@ const GetInTouch = () => {
             <Navbar />
           </div>
         </div>
-        <div className="hero">
+        <div className="hero flex justify-center">
           <div className="xl:max-w-[1280px] w-full fixed">
-            <Hero />
-          </div>
-          <div className="fixed bottom-[2em] sm:hidden">
-            <Socials
-              social="flex px-6"
-              icon="mr-6"
-            />
+            <Login />
           </div>
         </div>
       </div>
@@ -28,4 +22,4 @@ const GetInTouch = () => {
   );
 };
 
-export default GetInTouch;
+export default Register;

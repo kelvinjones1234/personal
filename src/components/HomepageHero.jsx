@@ -17,7 +17,7 @@ const Hero = () => (
             ...you just have to know you are.
           </p>
           <div className="">
-            <p className="text-[.7rem] md:text-[.9rem] p-1 bg-six inline rounded relative text-white">
+            <p className="text-[.65rem] md:text-[.9rem] p-1 bg-six inline rounded relative font-poppins">
               Going about it the right way, is the right way to go about it...
             </p>
           </div>

@@ -4,7 +4,7 @@ import twitter from "../assets/images/twitter.svg";
 import instagram from "../assets/images/instagram.svg";
 
 const Socials = ({icon, social}) => (
-  <section className="static top-[7em] md:top-2 lg:top-3 md:p-0">
+  <section className="top-[7em] md:top-2 lg:top-3 md:p-0">
       <div className={`${social}`}>
         <div className={`${icon}`}>
           <img src={facebook} alt="facebook" className="h-[1.5em]" />
